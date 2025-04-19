@@ -5,21 +5,21 @@ build-backend = "hatchling.build"
 [project]
 name = "test_defense_shield"
 dynamic = ["version"]
-description = "test project"
+description = "Identify and reduce instances of underutilization by the users of high-performance computing systems"
 readme = "README.md"
 authors = [{name="Jonathan Halverson", email="halverson@princeton.edu"}]
-maintainers = [{name="Jonathan Halverson", email="halverson@princeton.edu"}]
-keywords = ["Slurm", "underutilization"]
+license = {file = 'LICENSE'}
+keywords = ["alert", "monitoring", "HPC", "Slurm", "underutilization"]
 requires-python = ">=3.7"
 dependencies = [
-  "pandas",
+  "pandas>=2.1.0",
   "pyarrow",
   "pyyaml",
   "requests"
 ]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
-  "Intended Audience :: Education",
+  "Environment :: Console",
   "Intended Audience :: Information Technology",
   "Intended Audience :: System Administrators",
   "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
@@ -36,17 +36,16 @@ classifiers = [
   "Typing :: Typed",
 ]
 
-[project.optional-dependenices]
-test = ["pytest"]
+[project.optional-dependencies]
+test = ["pytest>=6"]
+check = ["ruff>=0.6.0"]
 
 [project.urls]
-"Source Code" = "https://github.com/jdh4/test_defense_shield"
 "Documentation" = "https://princetonuniversity.github.io/job_defense_shield"
-"Homepage" = "https://github.com/jdh4/test_defense_shield"
 "Repository" = "https://github.com/jdh4/test_defense_shield"
 
 [project.scripts]
-project-cli = "test_defense_shield.test_defense_shield:main"
+test_defense_shield = "test_defense_shield.test_defense_shield:main"
 
 [tool.hatch]
 version.path = "src/test_defense_shield/__init__.py"

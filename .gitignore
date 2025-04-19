@@ -1,3 +1,5 @@
 *.pyc
 __pycache__
-.jds-env
+.jds-env/
+mp-env/
+dist/
