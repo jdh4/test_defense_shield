@@ -13,9 +13,9 @@ keywords = ["alert", "monitoring", "HPC", "Slurm", "underutilization"]
 requires-python = ">=3.7"
 dependencies = [
   "pandas>=2.1.0",
-  "pyarrow",
-  "pyyaml",
-  "requests"
+  "pyarrow>=15.0.0",
+  "pyyaml>=6.0",
+  "requests>=2.31.0"
 ]
 classifiers = [
   "Development Status :: 5 - Production/Stable",
